@@ -79,6 +79,39 @@ def q10():
     print("Q10:", asyncio.run(asyncio.gather(a(), b())))  # [1, 2]
 
 
+def q11():
+    # Q11. __init_subclass__ hook
+    print("Q11:", "__init_subclass__ (classmethod) is called on the parent "
+          "whenever a subclass is defined.")
+
+
+def q12():
+    # Q12. descriptor protocol
+    print("Q12:", "Defining __get__ makes it a non-data descriptor; "
+          "adding __set__ makes it a data descriptor. __delete__ is optional.")
+
+
+def q13():
+    # Q13. yield from delegates
+    def gen():
+        yield from [1, 2, 3]
+    print("Q13:", list(gen()))  # [1, 2, 3] (same as yielding each item)
+
+
+def q14():
+    # Q14. inspect module
+    import inspect
+    print("Q14:", "the 'inspect' module (e.g. inspect.signature(func)) "
+          "lets you read parameters at runtime.")
+
+
+def q15():
+    # Q15. asyncio.Lock for coroutine safety
+    print("Q15:", "async with lock: serializes concurrent coroutines safely; "
+          "a plain variable isn't atomic under the event loop.")
+
+
 if __name__ == "__main__":
-    for fn in (q1, q2, q3, q4, q5, q6, q7, q8, q9, q10):
+    for fn in (q1, q2, q3, q4, q5, q6, q7, q8, q9, q10,
+               q11, q12, q13, q14, q15):
         fn()

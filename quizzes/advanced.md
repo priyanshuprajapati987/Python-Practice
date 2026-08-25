@@ -34,5 +34,20 @@ What does `if (n := len(x)) > 5:` do?
 ### Q10. `asyncio.gather`
 What does `asyncio.gather(*coros)` return?
 
+### Q11. `__init_subclass__`
+What special method lets a parent class react when a subclass is created?
+
+### Q12. Descriptor protocol
+Which methods (`__get__`, `__set__`, `__delete__`) make an object a descriptor?
+
+### Q13. `yield from`
+What does `yield from iterable` do compared to `for x in iterable: yield x`?
+
+### Q14. `inspect` module
+Which module lets you introspect a function's parameters at runtime?
+
+### Q15. `asyncio.Lock`
+Why use `async with lock:` instead of a plain variable for concurrent access?
+
 ---
 ➡️ Check answers in `solutions/advanced.py`

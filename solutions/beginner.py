@@ -64,6 +64,61 @@ def q10():
     print("Q10:", "yes" if x > 3 else "no")  # yes
 
 
+def q11():
+    # Q11. abs
+    print("Q11:", abs(-7))  # 7
+
+
+def q12():
+    # Q12. str.split
+    print("Q12:", "a,b,c".split(","))  # ['a', 'b', 'c']
+
+
+def q13():
+    # Q13. list.insert at index 0
+    a = [1, 2, 3]
+    a.insert(0, 9)
+    print("Q13:", a)  # [9, 1, 2, 3]
+
+
+def q14():
+    # Q14. str.replace (returns a new string)
+    print("Q14:", "hello".replace("l", "L"))  # heLLo
+
+
+def q15():
+    # Q15. `not in` membership
+    a = [1, 2, 3]
+    print("Q15:", 4 not in a)  # True
+
+
+def q16():
+    # Q16. len counts top-level elements
+    print("Q16:", len([1, [2, 3], 4]))  # 3
+
+
+def q17():
+    # Q17. min compares strings lexicographically
+    print("Q17:", min("zebra", "apple"))  # apple
+
+
+def q18():
+    # Q18. small ints are cached (identity)
+    a = b = 5
+    print("Q18:", a is b)  # True (small-int interning for literals)
+
+
+def q19():
+    # Q19. print sep
+    print("Q19:", "x", "y", "z", sep="-")  # x-y-z
+
+
+def q20():
+    # Q20. range default start = 0
+    print("Q20:", list(range(3)))  # [0, 1, 2]
+
+
 if __name__ == "__main__":
-    for fn in (q1, q2, q3, q4, q5, q6, q7, q8, q9, q10):
+    for fn in (q1, q2, q3, q4, q5, q6, q7, q8, q9, q10,
+               q11, q12, q13, q14, q15, q16, q17, q18, q19, q20):
         fn()

@@ -14,6 +14,11 @@ QUIZ = [
     ("intermediate", "map(str,[1,2,3]) -> list is?", "['1', '2', '3']"),
     ("advanced", "First param of a @classmethod is?", "cls"),
     ("advanced", "Which is better for CPU-bound: threading or multiprocessing?", "multiprocessing"),
+    ("beginner", "abs(-7) is?", "7"),
+    ("beginner", "'a,b,c'.split(',') is?", "['a', 'b', 'c']"),
+    ("beginner", "list(range(3)) is?", "[0, 1, 2]"),
+    ("advanced", "Method invoked when a subclass is defined?", "__init_subclass__"),
+    ("advanced", "Module to read a function's signature at runtime?", "inspect"),
 ]
 
 
