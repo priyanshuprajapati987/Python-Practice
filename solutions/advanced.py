@@ -111,7 +111,49 @@ def q15():
           "a plain variable isn't atomic under the event loop.")
 
 
+def q16():
+    # Q16. functools.partial pre-fills arguments
+    from functools import partial
+    rev_sorted = partial(sorted, reverse=True)
+    print("Q16:", rev_sorted([3, 1, 2]))  # [3, 2, 1]
+
+
+def q17():
+    # Q17. contextlib.suppress swallows listed exceptions
+    import contextlib
+    print("Q17:", "with contextlib.suppress(FileNotFoundError): silently "
+          "ignores that exception if it occurs.")
+
+
+def q18():
+    # Q18. field(default_factory=...) builds a fresh value per instance
+    from dataclasses import dataclass, field
+
+    @dataclass
+    class B:
+        items: list = field(default_factory=list)
+    print("Q18:", B().items, B().items is B().items)  # [] False
+
+
+def q19():
+    # Q19. abc forces subclass implementation
+    from abc import ABC, abstractmethod
+
+    class Shape(ABC):
+        @abstractmethod
+        def area(self):
+            ...
+    print("Q19:", "a subclass of Shape cannot be instantiated until it "
+          "implements area().")
+
+
+def q20():
+    # Q20. concurrent.futures executors
+    print("Q20:", "ThreadPoolExecutor runs in threads; "
+          "ProcessPoolExecutor runs in separate processes (beats GIL).")
+
+
 if __name__ == "__main__":
     for fn in (q1, q2, q3, q4, q5, q6, q7, q8, q9, q10,
-               q11, q12, q13, q14, q15):
+               q11, q12, q13, q14, q15, q16, q17, q18, q19, q20):
         fn()

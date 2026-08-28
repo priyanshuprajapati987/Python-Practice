@@ -118,7 +118,60 @@ def q20():
     print("Q20:", list(range(3)))  # [0, 1, 2]
 
 
+def q21():
+    # Q21. str.isdigit
+    print("Q21:", "123".isdigit(), "12a".isdigit())  # True False
+
+
+def q22():
+    # Q22. reverse slice
+    print("Q22:", [1, 2, 3][::-1])  # [3, 2, 1]
+
+
+def q23():
+    # Q23. sorted returns a new list
+    print("Q23:", sorted([3, 1, 2]))  # [1, 2, 3]
+
+
+def q24():
+    # Q24. enumerate with start
+    print("Q24:", list(enumerate(["a", "b"], start=1)))  # [(1, 'a'), (2, 'b')]
+
+
+def q25():
+    # Q25. set deduplicates
+    print("Q25:", set([1, 1, 2, 2, 3]))  # {1, 2, 3}
+
+
+def q26():
+    # Q26. ord / chr
+    print("Q26:", ord("A"), chr(65))  # 65 A
+
+
+def q27():
+    # Q27. list repetition
+    print("Q27:", [0] * 3)  # [0, 0, 0]
+
+
+def q28():
+    # Q28. empty container is falsy, non-empty (even with falsy item) is truthy
+    print("Q28:", bool([]), bool([0]))  # False True
+
+
+def q29():
+    # Q29. str.format positional
+    print("Q29:", "{} and {}".format("x", "y"))  # x and y
+
+
+def q30():
+    # Q30. del removes by index
+    a = [1, 2, 3]
+    del a[1]
+    print("Q30:", a)  # [1, 3]
+
+
 if __name__ == "__main__":
     for fn in (q1, q2, q3, q4, q5, q6, q7, q8, q9, q10,
-               q11, q12, q13, q14, q15, q16, q17, q18, q19, q20):
+               q11, q12, q13, q14, q15, q16, q17, q18, q19, q20,
+               q21, q22, q23, q24, q25, q26, q27, q28, q29, q30):
         fn()

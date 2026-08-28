@@ -64,6 +64,68 @@ def q10():
     print("Q10:", list(map(str, [1, 2, 3])))  # ['1', '2', '3']
 
 
+def q11():
+    # Q11. Counter counts frequencies
+    from collections import Counter
+    print("Q11:", Counter("aabb"))  # Counter({'a':2, 'b':2})
+
+
+def q12():
+    # Q12. filter keeps truthy predicate results
+    print("Q12:", list(filter(lambda n: n % 2 == 0, [1, 2, 3, 4])))  # [2, 4]
+
+
+def q13():
+    # Q13. sorted reverse
+    print("Q13:", sorted([3, 1, 2], reverse=True))  # [3, 2, 1]
+
+
+def q14():
+    # Q14. dict merge operator
+    a = {"x": 1}
+    b = {"y": 2}
+    print("Q14:", a | b)  # {'x': 1, 'y': 2}
+
+
+def q15():
+    # Q15. is (identity) vs == (equality)
+    print("Q15:", "is checks object identity (same memory); == checks value "
+          "equality.")
+
+
+def q16():
+    # Q16. re.search finds first match
+    import re
+    print("Q16:", re.search(r"\d+", "abc123").group())  # 123
+
+
+def q17():
+    # Q17. global for rebinding module-level names
+    print("Q17:", "use 'global' only when you assign to a module-level "
+          "variable inside a function.")
+
+
+def q18():
+    # Q18. shallow copy shares nested objects
+    src = [[1, 2], [3, 4]]
+    cp = src.copy()
+    cp[0][0] = 99
+    print("Q18:", src)  # [[99, 2], [3, 4]] (nested list mutated too)
+
+
+def q19():
+    # Q19. os.path.join builds a path
+    import os
+    print("Q19:", os.path.join("a", "b", "c"))  # a/b/c (or a\b\c on Windows)
+
+
+def q20():
+    # Q20. catching multiple exceptions
+    print("Q20:", "except (ValueError, TypeError):  -> catches either type "
+          "in one clause.")
+
+
 if __name__ == "__main__":
-    for fn in (q1, q2, q3, q4, q5, q6, q7, q8, q9, q10):
+    for fn in (q1, q2, q3, q4, q5, q6, q7, q8, q9, q10,
+               q11, q12, q13, q14, q15, q16, q17, q18, q19, q20):
         fn()

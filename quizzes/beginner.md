@@ -70,5 +70,35 @@ What does `print("x", "y", "z", sep="-")` print?
 ### Q20. `range` default start
 What does `list(range(3))` produce?
 
+### Q21. `isdigit`
+What is `"123".isdigit()` and `"12a".isdigit()`?
+
+### Q22. Reverse a list
+What does `[1, 2, 3][::-1]` produce?
+
+### Q23. `sorted`
+What is `sorted([3, 1, 2])`?
+
+### Q24. `enumerate` start
+What does `list(enumerate(["a", "b"], start=1))` give?
+
+### Q25. `set` from list
+What is `set([1, 1, 2, 2, 3])`?
+
+### Q26. `ord` / `chr`
+What is `ord("A")` and `chr(65)`?
+
+### Q27. Repeat a list
+What does `[0] * 3` produce?
+
+### Q28. Truthiness of containers
+What is `bool([])` and `bool([0])`?
+
+### Q29. `str.format`
+What is `"{} and {}".format("x", "y")`?
+
+### Q30. `del` statement
+Given `a = [1, 2, 3]`, what does `del a[1]` leave in `a`?
+
 ---
 ➡️ Check answers in `solutions/beginner.py`

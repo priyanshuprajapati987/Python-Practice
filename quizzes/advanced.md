@@ -49,5 +49,20 @@ Which module lets you introspect a function's parameters at runtime?
 ### Q15. `asyncio.Lock`
 Why use `async with lock:` instead of a plain variable for concurrent access?
 
+### Q16. `functools.partial`
+What does `functools.partial(sorted, reverse=True)` create?
+
+### Q17. `contextlib.suppress`
+What does `with contextlib.suppress(FileNotFoundError):` do?
+
+### Q18. `dataclasses.field`
+How do you give a field a default factory (e.g. a new list per instance)?
+
+### Q19. `abc.ABC` + `@abstractmethod`
+How do you force subclasses to implement a method?
+
+### Q20. `concurrent.futures`
+Which executor runs callables in separate threads, and which in processes?
+
 ---
 ➡️ Check answers in `solutions/advanced.py`

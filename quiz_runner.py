@@ -19,6 +19,11 @@ QUIZ = [
     ("beginner", "list(range(3)) is?", "[0, 1, 2]"),
     ("advanced", "Method invoked when a subclass is defined?", "__init_subclass__"),
     ("advanced", "Module to read a function's signature at runtime?", "inspect"),
+    ("beginner", "'123'.isdigit() is?", "True"),
+    ("beginner", "[1,2,3][::-1] is?", "[3, 2, 1]"),
+    ("intermediate", "Counter('aabb') counts?", "{'a': 2, 'b': 2}"),
+    ("intermediate", "a | b merges dicts: True or False?", "True"),
+    ("advanced", "ThreadPoolExecutor vs ProcessPoolExecutor for CPU work?", "ProcessPoolExecutor"),
 ]
 
 
