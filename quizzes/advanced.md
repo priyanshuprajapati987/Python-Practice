@@ -64,5 +64,20 @@ How do you force subclasses to implement a method?
 ### Q20. `concurrent.futures`
 Which executor runs callables in separate threads, and which in processes?
 
+### Q21. `asyncio.run`
+How do you execute a coroutine `main()` from synchronous code?
+
+### Q22. `type()` as metaclass
+What does `type("Point", (object,), {"x": 0})` create?
+
+### Q23. `contextlib.contextmanager`
+In a `@contextmanager` function, what does `yield` separate?
+
+### Q24. `functools.reduce`
+What does `from functools import reduce; reduce(lambda a, b: a + b, [1, 2, 3, 4])` return?
+
+### Q25. `__getattr__` vs `__getattribute__`
+What is the key difference between `__getattr__` and `__getattribute__`?
+
 ---
 ➡️ Check answers in `solutions/advanced.py`

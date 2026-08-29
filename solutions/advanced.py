@@ -153,7 +153,40 @@ def q20():
           "ProcessPoolExecutor runs in separate processes (beats GIL).")
 
 
+def q21():
+    # Q21. run a coroutine from sync code
+    import asyncio
+    async def main():
+        return 42
+    print("Q21:", asyncio.run(main()))  # 42
+
+
+def q22():
+    # Q22. type(name, bases, dict) builds a class dynamically
+    Point = type("Point", (object,), {"x": 0})
+    print("Q22:", Point, Point().x)  # <class 'Point'> 0
+
+
+def q23():
+    # Q23. yield splits setup / teardown
+    print("Q23:", "code BEFORE yield runs on __enter__; code AFTER yield "
+          "runs on __exit__ (the yielded value is the 'as' variable).")
+
+
+def q24():
+    # Q24. reduce folds left-to-right
+    from functools import reduce
+    print("Q24:", reduce(lambda a, b: a + b, [1, 2, 3, 4]))  # 10
+
+
+def q25():
+    # Q25. __getattribute__ vs __getattr__
+    print("Q25:", "__getattribute__ is called for EVERY attribute access; "
+          "__getattr__ is called only when the attribute is NOT found.")
+
+
 if __name__ == "__main__":
     for fn in (q1, q2, q3, q4, q5, q6, q7, q8, q9, q10,
-               q11, q12, q13, q14, q15, q16, q17, q18, q19, q20):
+               q11, q12, q13, q14, q15, q16, q17, q18, q19, q20,
+               q21, q22, q23, q24, q25):
         fn()

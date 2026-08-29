@@ -64,5 +64,35 @@ What does `import os; os.path.join("a", "b", "c")` produce (on most systems)?
 ### Q20. Multiple except
 How do you catch both `ValueError` and `TypeError` in one `except`?
 
+### Q21. `zip` with unequal lengths
+What does `list(zip([1, 2, 3], ["a", "b"]))` produce?
+
+### Q22. `dict.setdefault`
+For `d = {}`, what does `d.setdefault("x", []).append(1)` leave in `d`?
+
+### Q23. `popitem`
+For `d = {"a": 1, "b": 2}`, what does `d.popitem()` return and what is `d` after?
+
+### Q24. `sum` with start value
+What is `sum([1, 2, 3], 10)`?
+
+### Q25. `all` / `any` on empty
+What are `all([])` and `any([])`?
+
+### Q26. Sort list of dicts
+Given `people = [{"name": "b", "age": 30}, {"name": "a", "age": 20}]`, sort by `"age"`. Show the call.
+
+### Q27. `itertools.groupby`
+What does `itertools.groupby` require about the input data to group correctly?
+
+### Q28. `try` / `else` again
+In `try / except / else / finally`, which block runs when an exception DID occur?
+
+### Q29. `bytes` vs `bytearray`
+Which one is mutable: `bytes` or `bytearray`?
+
+### Q30. Format spec
+What does `"{:.2f}".format(3.14159)` produce?
+
 ---
 ➡️ Check answers in `solutions/intermediate.py`

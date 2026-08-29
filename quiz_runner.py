@@ -24,6 +24,11 @@ QUIZ = [
     ("intermediate", "Counter('aabb') counts?", "{'a': 2, 'b': 2}"),
     ("intermediate", "a | b merges dicts: True or False?", "True"),
     ("advanced", "ThreadPoolExecutor vs ProcessPoolExecutor for CPU work?", "ProcessPoolExecutor"),
+    ("intermediate", "sum([1,2,3], 10) is?", "16"),
+    ("intermediate", "all([]) and any([]) are?", "True False"),
+    ("intermediate", "'{:.2f}'.format(3.14159) is?", "3.14"),
+    ("advanced", "reduce(lambda a,b:a+b,[1,2,3,4]) is?", "10"),
+    ("advanced", "Which is called for EVERY attribute access?", "__getattribute__"),
 ]
 
 

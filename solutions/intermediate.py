@@ -125,7 +125,66 @@ def q20():
           "in one clause.")
 
 
+def q21():
+    # Q21. zip stops at the shortest iterable
+    print("Q21:", list(zip([1, 2, 3], ["a", "b"])))  # [(1, 'a'), (2, 'b')]
+
+
+def q22():
+    # Q22. setdefault returns the value (creating it if missing)
+    d = {}
+    d.setdefault("x", []).append(1)
+    print("Q22:", d)  # {'x': [1]}
+
+
+def q23():
+    # Q23. popitem removes & returns a (key, value) pair
+    d = {"a": 1, "b": 2}
+    item = d.popitem()
+    print("Q23:", item, "| d:", d)  # ('b', 2) | {'a': 1}
+
+
+def q24():
+    # Q24. sum(start=...) adds the start value
+    print("Q24:", sum([1, 2, 3], 10))  # 16
+
+
+def q25():
+    # Q25. all of empty is True; any of empty is False
+    print("Q25:", all([]), any([]))  # True False
+
+
+def q26():
+    # Q26. sort by dict key via key=lambda
+    people = [{"name": "b", "age": 30}, {"name": "a", "age": 20}]
+    print("Q26:", sorted(people, key=lambda p: p["age"]))
+    # [{'name':'a','age':20}, {'name':'b','age':30}]
+
+
+def q27():
+    # Q27. groupby needs sorted input on the key
+    print("Q27:", "groupby only groups CONSECUTIVE equal keys, so you must "
+          "sort the data by the grouping key first.")
+
+
+def q28():
+    # Q28. else runs only when NO exception occurred
+    print("Q28:", "the 'except' block runs when an exception occurs; "
+          "'else' runs only when there was NO exception.")
+
+
+def q29():
+    # Q29. bytearray is mutable
+    print("Q29:", "bytearray is mutable; bytes is immutable.")
+
+
+def q30():
+    # Q30. format spec .2f -> 2 decimals
+    print("Q30:", "{:.2f}".format(3.14159))  # 3.14
+
+
 if __name__ == "__main__":
     for fn in (q1, q2, q3, q4, q5, q6, q7, q8, q9, q10,
-               q11, q12, q13, q14, q15, q16, q17, q18, q19, q20):
+               q11, q12, q13, q14, q15, q16, q17, q18, q19, q20,
+               q21, q22, q23, q24, q25, q26, q27, q28, q29, q30):
         fn()
